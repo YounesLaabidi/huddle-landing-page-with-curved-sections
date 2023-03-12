@@ -1,0 +1,14 @@
+$color-palette: (
+  rose-pink: #fd53c0,
+  persian-pink: #ff7dd0,
+  charleston-green: #00252e,
+  gunmetal: #1d3037,
+  cadet: #5d6969,
+  alice-blue: #f6fbff,
+  cadet-grey: #8f989f,
+  magnolia: #fff6fd,
+  white: #fefefe,
+);
+@function color($color) {
+  @return map-get($color-palette, $color);
+}

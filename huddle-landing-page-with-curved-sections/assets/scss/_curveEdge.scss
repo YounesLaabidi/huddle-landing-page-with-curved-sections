@@ -1,0 +1,17 @@
+@import "color";
+img[alt="mobile-curve"] {
+  width: 100%;
+  background-color: color(white);
+  display: block;
+  @include mq {
+    display: none;
+  }
+}
+img[alt="desktop-curve"] {
+  display: none;
+  @include mq {
+    width: 100%;
+    background-color: color(white);
+    display: block;
+  }
+}

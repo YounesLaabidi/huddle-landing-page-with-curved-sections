@@ -1,0 +1,41 @@
+.section-three {
+  background-color: color(alice-blue);
+  &__wrapper {
+    width: min(100% - 50px, 882px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    @include mq {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(6, auto);
+      text-align: left;
+      padding: 31.19px 0 23.8px;
+    }
+    h1 {
+      @extend .section-one__wrapper__heading-one;
+      order: 2;
+      @include mq {
+        padding-top: 92px;
+      }
+    }
+    p {
+      @extend .section-one__wrapper__paragraph;
+      order: 3;
+      padding-bottom: 100px;
+      @include mq {
+        padding-bottom: unset;
+      }
+    }
+    img {
+      order: 1;
+      padding-top: 13px;
+      @include mq {
+        padding-top: unset;
+        grid-column: 7 / -1;
+        grid-row: 1 / -1;
+        width: 388px;
+      }
+    }
+  }
+}
